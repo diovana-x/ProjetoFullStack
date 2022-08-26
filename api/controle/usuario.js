@@ -1,4 +1,10 @@
-'use strict'
+function init(req, res) {
+    res.send(200, { message: "User's route!" });
+}
+
+module.exports = { init };
+
+/* 'use strict'
 
 var Usuario = require('../models/usuarios');
 
@@ -17,4 +23,4 @@ function teste(req, res) {
 module.exports = {
     inicio,
     teste
-}
+} */

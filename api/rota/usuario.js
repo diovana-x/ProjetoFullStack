@@ -1,11 +1,7 @@
-"user strict"
+var express = require("express");
+var router = express.Router();
+var { init } = require("../controle/usuario");
 
-var express = require('express');
-var UsuarioControle = (controle / usuario);
+router.get("/usuario", init);
 
-var api = express.Router();
-
-api.get('home', UsuarioControle.home);
-api.get('teste', UsuarioControle.teste);
-
-module.exports = api;
+module.exports = router;
