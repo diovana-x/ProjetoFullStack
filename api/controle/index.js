@@ -1,13 +1,13 @@
-function init(req, res) {
+function inicio(req, res) {
     res.status(200).send({
-        message: "Hello world!",
+        message: 'Hello word!',
     });
 }
 
-function test(req, res) {
+function teste(req, res) {
     res.status(200).send({
-        message: "Testing node server!",
+        message: 'Testing node server!',
     });
 }
 
-module.exports = { init, test };
+module.exports = { inicio, teste };

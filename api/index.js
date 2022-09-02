@@ -1,22 +1,18 @@
-const express = require("express");
-const router = express.Router();
-const { init, test } = require("../controle/index");
+'use strict'
 
-router.get("/", init);
-
-router.get("/testing", test);
-
-module.exports = router;
-
-/* 'use_strict'
-
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const app = require('./app');
+const port = 3800;
 
 // Conexão com o banco de dados
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/projeto-web-fullstack')//, { useMongoClient: true }
+mongoose.connect('mongodb://localhost:27017/projeto-web-fullstack')
     .then(() => {
-        console.log("++ Conexão realizada com sucesso!")
+        console.log("++ Conexão realizada com sucesso!");
+
+        // Criação do servidor
+        app.listen(port, () => {
+            console.log("Servidor em funcionamento: http://localhost:3800");
+        });
     })
     .catch(err => console.log(err));
- */

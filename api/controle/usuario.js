@@ -1,8 +1,25 @@
-function init(req, res) {
-    res.send(200, { message: "User's route!" });
+'use strict';
+
+const Usuario = require('../modelos/usuarios');
+
+function inicio(req, res) {
+    res.status(200).send({
+        nome: 'Diovana',
+        idade: '18',
+        apelido: 'baxinha',
+    });
 }
 
-module.exports = { init };
+function teste(req, res) {
+    res.status(200).send({
+        message: 'Testando rotas',
+    });
+}
+
+module.exports = {
+    inicio,
+    teste
+}
 
 /* 'use strict'
 

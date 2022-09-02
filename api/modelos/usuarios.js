@@ -1,11 +1,9 @@
 'use strict'
 
-const { default: mongoose } = require("mongoose")
+const mongoose = require('mongoose');
+const Esquema = mongoose.Schema;
 
-var mongoose = require('mongoose');
-var Esquema = mongoose.Esquema;
-
-var UsuarioEsquema = Esquema({
+const UsuarioEsquema = Esquema({
     nome: String,
     sobrenome: String,
     apelido: String,
@@ -15,4 +13,4 @@ var UsuarioEsquema = Esquema({
     imagem: String
 });
 
-module.exports = mongoose.modelo('Usuario', UsuarioEsquema);
+module.exports = mongoose.model('Usuario', UsuarioEsquema);
